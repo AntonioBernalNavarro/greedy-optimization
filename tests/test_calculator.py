@@ -3,7 +3,7 @@ Test goes here
 
 """
 
-from mylib.calculator import add
+from greedy_lab.calculator import add
 
 
 def test_add():

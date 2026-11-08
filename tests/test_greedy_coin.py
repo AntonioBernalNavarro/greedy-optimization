@@ -1,4 +1,4 @@
-"""Tests for the greedy change CLI and the pure logic in mylib.coin."""
+"""Tests for the greedy change CLI and the pure logic in greedy_lab.coin."""
 
 import json
 
@@ -6,7 +6,7 @@ import pytest
 from click.testing import CliRunner
 
 from greedy_coin import main
-from mylib.coin import greedy_coin
+from greedy_lab.coin import greedy_coin
 
 # --- pure logic ---------------------------------------------------------
 

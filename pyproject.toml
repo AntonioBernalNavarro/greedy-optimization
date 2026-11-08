@@ -1,0 +1,6 @@
+# Configuración de herramientas.
+# La metadata del proyecto ([project]) se añade en un commit posterior.
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

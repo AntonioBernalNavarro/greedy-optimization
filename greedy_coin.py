@@ -18,7 +18,7 @@ unambiguous and validated before any computation happens.
 import json
 import click
 
-from mylib.coin import greedy_coin
+from greedy_lab.coin import greedy_coin
 
 
 def _format_change(change_cents: int, counts: dict) -> str:

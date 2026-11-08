@@ -2,7 +2,7 @@
 Main cli or app entry point
 """
 
-from mylib.calculator import add
+from greedy_lab.calculator import add
 import click
 
 

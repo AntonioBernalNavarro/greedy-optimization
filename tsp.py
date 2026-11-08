@@ -16,6 +16,7 @@ import click
 
 CACHE_FILE = "city_coords_cache.json"
 
+
 # build a function that takes variable length argument of strings and returns a list of cities
 def my_cities(*args):
     """Build a list of cities from input"""
