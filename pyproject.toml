@@ -1,5 +1,25 @@
-# Configuración de herramientas.
-# La metadata del proyecto ([project]) se añade en un commit posterior.
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "greedy-lab"
+version = "0.1.0"
+description = "Greedy change CLI and traveling-salesman simulation (Coursera MLOps C2 lab)"
+requires-python = ">=3.12"
+dependencies = [
+    "click",
+    "geopy",
+    "pandas",
+]
+
+[project.scripts]
+greedy-coin = "greedy_lab.cli:greedy_coin_cli"
+greedy-add = "greedy_lab.cli:calculator_cli"
+greedy-tsp = "greedy_lab.cli:tsp_cli"
+
+[tool.setuptools.packages.find]
+include = ["greedy_lab*"]
 
 [tool.pytest.ini_options]
 pythonpath = ["."]
