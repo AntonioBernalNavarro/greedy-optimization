@@ -6,6 +6,7 @@ import click
 
 from greedy_lab.calculator import add
 from greedy_lab.coin import greedy_coin
+from greedy_lab.tsp import create_cities_dataframe, my_cities, run_simulations
 
 
 def _format_change(change_cents: int, counts: dict) -> str:
@@ -61,3 +62,32 @@ def calculator_cli(a: int, b: int) -> None:
     Example: ./main.py 2 3
     """
     click.echo(add(a, b))
+
+
+@click.group()
+def tsp_cli() -> None:
+    """Traveling salesman simulation."""
+
+
+@tsp_cli.command("cities")
+@click.argument("cities", nargs=-1)
+@click.option("--count", default=5, help="Number of simulations to run")
+def cities_cli(cities, count):
+    """Run the simulation over an explicit list of cities."""
+    df = create_cities_dataframe(my_cities(*cities))
+    best_distance, best_route, all_distances = run_simulations(count, df=df)
+    for i, d in enumerate(all_distances):
+        click.echo(f"Running similation: {i}:  Found total distance: {d}")
+    click.echo(f"Shortest Distance: {best_distance}")
+    click.echo(f"Cities Visited: {best_route}")
+
+
+@tsp_cli.command("simulate")
+@click.option("--count", default=10, help="Number of times to run the simulation.")
+def simulate_cli(count):
+    """Run the simulation ``count`` times over the default 20 cities."""
+    best_distance, best_route, all_distances = run_simulations(count)
+    for i, d in enumerate(all_distances):
+        click.echo(f"Running similation: {i}:  Found total distance: {d}")
+    click.echo(f"Shortest Distance: {best_distance}")
+    click.echo(f"Cities Visited: {best_route}")
