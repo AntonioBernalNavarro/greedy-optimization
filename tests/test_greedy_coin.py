@@ -5,7 +5,7 @@ import json
 import pytest
 from click.testing import CliRunner
 
-from greedy_coin import main
+from greedy_lab.cli import greedy_coin_cli as main
 from greedy_lab.coin import greedy_coin
 
 # --- pure logic ---------------------------------------------------------

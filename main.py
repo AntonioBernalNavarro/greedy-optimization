@@ -1,18 +1,7 @@
-"""
-Main cli or app entry point
-"""
+"""Shim: delegates to greedy_lab.cli.calculator_cli."""
 
-from greedy_lab.calculator import add
-import click
-
-
-@click.command("add")
-@click.argument("a", type=int)
-@click.argument("b", type=int)
-def add_cli(a, b):
-    click.echo(add(a, b))
-
+from greedy_lab.cli import calculator_cli as main
 
 if __name__ == "__main__":
     # pylint: disable=no-value-for-parameter
-    add_cli()
+    main()
