@@ -23,6 +23,41 @@ The full analysis of what was changed and why is in
 
 ---
 
+## Table of contents
+
+- [Repository context](#repository-context)
+- [Requirements](#requirements)
+  - [Python version](#python-version)
+  - [Dependency changes vs. the original lab](#dependency-changes-vs-the-original-lab)
+- [Setup](#setup)
+- [Project structure](#project-structure)
+- [Part A — Greedy change CLI](#part-a--greedy-change-cli)
+  - [Usage](#usage)
+  - [Flags](#flags)
+  - [What changed vs. the original](#what-changed-vs-the-original)
+- [Part B — Traveling salesman](#part-b--traveling-salesman)
+  - [Usage](#usage-1)
+  - [Geocoding cache](#geocoding-cache)
+  - [Optimal number of simulations](#optimal-number-of-simulations)
+- [Console scripts](#console-scripts)
+- [Testing and quality](#testing-and-quality)
+- [Docker](#docker)
+- [Original lab tasks](#original-lab-tasks)
+- [Authors and origin](#authors-and-origin)
+- [License](#license)
+
+## Repository context
+
+| Field | Value |
+|---|---|
+| Base repository | [`nogibjj/Coursera-MLOps-C2-lab4-greedy-optimization`](https://github.com/nogibjj/Coursera-MLOps-C2-lab4-greedy-optimization) |
+| Fork | [`AntonioBernalNavarro/greedy-optimization`](https://github.com/AntonioBernalNavarro/greedy-optimization) |
+| Working branch | `main` (commit `a9d4d50`) |
+| Runtime | Python 3.12 |
+| Status | Parts A and B complete; 18/18 tests passing; pylint 10.00/10 |
+
+---
+
 ## Requirements
 
 ### Python version
